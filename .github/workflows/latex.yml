@@ -3,6 +3,7 @@ name: LaTeX
 on:
   push:
     paths:
+      - .github/workflows/latex.yml
       - moderncvcolorCTUblue.sty
       - cv.tex
 
