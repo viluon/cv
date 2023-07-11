@@ -10,8 +10,7 @@ jobs:
   pdfLaTeX:
     runs-on: ubuntu-latest
     container:
-    #   image: ghcr.io/viluon/cv:slim
-      image: texlive/texlive:latest
+      image: ghcr.io/viluon/cv:slim
     steps:
     - name: checkout
       uses: actions/checkout@v3
