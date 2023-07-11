@@ -49,6 +49,7 @@ jobs:
         DSLIM_RC_ENTRYPOINT: /app/.github/workflows/build.sh
         DSLIM_EXCLUDE_PATTERN: /usr/lib/*-linux-gnu/libLLVM*.so*
         DSLIM_RC_EXE: |
+          apt-get update && \
           apt-get -y install coreutils procps && \
           export pid=$(pgrep --full 'bash.*workflows/build.sh$') && \
           ps aux && \
