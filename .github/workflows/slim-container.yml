@@ -35,7 +35,7 @@ jobs:
         tags: ${{ env.REGISTRY }}/${{ github.repository }}:latest
 
     - name: checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: slim it
       id: slim
