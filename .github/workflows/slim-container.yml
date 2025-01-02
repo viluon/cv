@@ -70,7 +70,7 @@ jobs:
           --report slim.report.json \
           build \
           --target ${{ env.REGISTRY }}/${{ github.repository }}:latest \
-          --tag slim
+          --tag ${{ env.REGISTRY }}/${{ github.repository }}:slim
 
     - name: dump the slim report
       run: cat slim.report.json
