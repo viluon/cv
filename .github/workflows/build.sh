@@ -7,5 +7,6 @@ set -euxo pipefail
 
 gzip --version
 echo | node --interactive
+ldd "$(which node)"
 
 latexmk -pdf -file-line-error cv.tex

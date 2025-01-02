@@ -41,16 +41,23 @@ jobs:
     - name: checkout
       uses: actions/checkout@v4
 
+    - name: set paths for preservation
+      run: |
+        cat <<EOF > /tmp/keep-paths.txt
+        /usr/lib/x86_64-linux-gnu/libdl.so.2
+        EOF
+
     - name: slim it
       id: slim
       env:
         DSLIM_CONTINUE_AFTER: exec
+        DSLIM_EXCLUDE_PATTERN: /usr/lib/*-linux-gnu/libLLVM*.so*
         DSLIM_HTTP_PROBE: false
         DSLIM_INCLUDE_CERT_ALL: false
         DSLIM_INCLUDE_SHELL: true
         DSLIM_PLOG: true
+        DSLIM_PRESERVE_PATH_FILE: /tmp/keep-paths.txt
         DSLIM_RC_ENTRYPOINT: /app/.github/workflows/build.sh
-        DSLIM_EXCLUDE_PATTERN: /usr/lib/*-linux-gnu/libLLVM*.so*
         DSLIM_RC_EXE: |
           apt-get update && \
           apt-get -y install coreutils procps && \
