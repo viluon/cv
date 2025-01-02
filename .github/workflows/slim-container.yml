@@ -43,7 +43,6 @@ jobs:
 
     - name: slim it
       id: slim
-      uses: viluon/docker-slim-action@latest
       env:
         DSLIM_CONTINUE_AFTER: exec
         DSLIM_HTTP_PROBE: false
@@ -62,14 +61,19 @@ jobs:
           echo "finished"
         DSLIM_SHOW_BLOGS: true
         DSLIM_SHOW_CLOGS: true
-      with:
-        target: ${{ env.REGISTRY }}/${{ github.repository }}:latest
-        tag: slim
+      run: |
+        curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
+        tar -xvf ds.tar.gz
+        ./dist_linux/slim \
+          --verbose \
+          --debug \
+          --report slim.report.json \
+          build \
+          --target ${{ env.REGISTRY }}/${{ github.repository }}:latest \
+          --tag slim
 
     - name: dump the slim report
-      run: echo "${REPORT}"
-      env:
-        REPORT: ${{ steps.slim.outputs.report }}
+      run: cat slim.report.json
 
     - name: push to the registry
       run: docker image push "${{ env.REGISTRY }}/${{ github.repository }}" --all-tags
