@@ -6,6 +6,7 @@ set -euxo pipefail
 # APT & other setup commands belong in the Dockerfile
 
 gzip --version
+tar --version
 echo | node --interactive
 ldd "$(which node)"
 
