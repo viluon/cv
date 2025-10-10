@@ -16,7 +16,6 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   slim:
@@ -45,6 +44,7 @@ jobs:
       run: |
         cat <<EOF > /tmp/keep-paths.txt
         /usr/lib/x86_64-linux-gnu/libdl.so.2
+        /usr/lib/x86_64-linux-gnu/libpthread.so.0
         EOF
 
     - name: slim it
