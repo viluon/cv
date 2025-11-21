@@ -38,7 +38,7 @@ jobs:
         tags: ${{ env.REGISTRY }}/${{ github.repository }}:latest
 
     - name: checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
 
     - name: set paths for preservation
       run: |
