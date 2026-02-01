@@ -10,6 +10,8 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@v13
       - name: build CV
         run: nix develop --command just build
+      - name: run checks
+        run: nix develop --command just check
       - name: upload PDF
         uses: actions/upload-artifact@v6
         with:
