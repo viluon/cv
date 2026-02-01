@@ -3,60 +3,91 @@ cv:
   email: viluon@pm.me
   website: https://viluon.me
   social_networks:
+    - network: Telegram
+      username: viluon
     - network: GitHub
       username: viluon
+    - network: LinkedIn
+      username: viluon
   sections:
+    Experience:
+      - company: "[Deutsche Börse Group](https://deutsche-boerse.com/)"
+        position: Senior software engineer
+        location: Prague, Czech Republic
+        start_date: "2023-12"
+        end_date: present
+        summary: >
+          We're building a new commodity exchange in the [M7 product
+          family](https://deutsche-boerse.com/dbg-en/products-services/ps-technology/ps-7-market-technology/ps-m7/7-Market-Technology-M7-25032),
+          in Kotlin, from scratch. It's a highly available 24/7 distributed
+          system with complex compliance requirements, where millisecond latency
+          matters and fairness is critical.
+
+          I joined DBAG as the third engineer to work on this project full-time.
+          Since then, both the team and the project have grown.
+
+          We work like a startup nested within a large corporation, without
+          Scrum, stand-ups, ceremonies, sprints, or estimates#footnote[Our team
+          follows https://agilemanifesto.org/, not some corporate framework.].
+          We had the chance to escape legacy constraints while building on the
+          organizational experience of developing and operating commodity
+          exchanges like [EPEX](https://www.epexspot.com/en) and
+          [XBID](https://www.epexspot.com/en/news/european-cross-border-intraday-xbid-solution-and-10-local-implementation-projects-successful).
+        highlights:
+          - >
+            Involved in key architectural decisions around distributed
+            consensus, performance, and fault tolerance
+          - >
+            Refactored a multi-repo codebase into a monorepo, building
+            Gradle-specific tooling to support the transition
+          - Introduced custom linting rules, turning lessons learned into CI checks
+          - Led performance evaluations, profiling, and benchmarking
+          - Helped design the recruitment process, interviewed candidates, onboarded new hires
+      - company: "[Intel](https://intel.com/)"
+        position: Compiler engineering intern
+        location: Remote
+        date: 2022 -- 2023
+        highlights:
+          - "Worked on the [P4 language compiler](https://github.com/p4lang/p4c) in the Switching and Fabric Group (XFG)"
+          - "Co-founded the [P4 analyzer](https://github.com/p4lang/p4analyzer) project -- my Master's thesis"
+      - company: "[Programming Research Laboratory](https://prl-prg.github.io/)"
+        position: Research intern
+        location: Prague, Czech Republic
+        date: 2021 -- 2022
+        summary: >
+          I briefly joined PRL to refactor and extend my Bachelor's thesis.
+        highlights:
+          - "Developed dynamic analysis for Haskell programs to explore the use of laziness in practice"
+      - company: "[Factorify](https://factorify.cz/en/)"
+        position: Java backend engineer
+        location: Prague, Czech Republic
+        date: 2017 -- 2019
+        summary: >
+          I was hired after one of the early employees noticed me reading
+          *Hands-on Machine Learning with Scikit-Learn and TensorFlow* on a
+          train. I worked part-time while studying and full-time during summers.
+        highlights:
+          - "Worked on a web-based ERP system designed for management and automation of factory workflows (Spring framework, Nginx, PostgreSQL)"
+          - "Maintained an Android application for warehouse inventory management"
     Education:
       - institution: Faculty of Information Technology, Czech Technical University
         area: systems programming
         degree: Master of Science
         location: Prague, Czech Republic
-        start_date: "2021"
-        end_date: "2023"
+        date: 2021 -- 2023
         highlights:
           - "[P4 Language Server](https://dspace.cvut.cz/handle/10467/108860), supervised by Ing. Viktor Puš, Ph.D., MBA"
       - institution: Faculty of Information Technology, Czech Technical University
         area: computer science
         degree: Bachelor of Science
         location: Prague, Czech Republic
-        start_date: "2017"
-        end_date: "2021"
+        date: 2017 -- 2021
         highlights:
           - "[Haskell dynamic tracing](https://github.com/viluon/bachelors-thesis), awarded [dean's award for outstanding final thesis](https://fit.cvut.cz/cs/studium/pruvodce-studiem/bakalarske-a-magisterske-studium/cena-dekana), supervised by Ing. Filip Křikava, Ph.D"
       - institution: Gymnázium Olomouc-Hejčín
         area: High school studies
         location: Olomouc, Czech Republic
-        start_date: "2011"
-        end_date: "2017"
-    Experience:
-      - company: "[Deutsche Börse Group](https://deutsche-boerse.com/)"
-        position: Senior software engineer
-        location: Prague, Czech Republic
-        start_date: "2023"
-        end_date: present
-        highlights:
-          - "developing high availability distributed systems for commodities trading in the [M7 product family](https://deutsche-boerse.com/dbg-en/products-services/ps-technology/ps-7-market-technology/ps-m7/7-Market-Technology-M7-25032)."
-      - company: "[Intel](https://intel.com/)"
-        position: Compiler engineering intern
-        location: Remote
-        start_date: "2022"
-        end_date: "2023"
-        highlights:
-          - "worked on the [P4 language compiler](https://github.com/p4lang/p4c) in the Switching and Fabric Group (XFG), co-founded the [P4 analyzer](https://github.com/p4lang/p4analyzer) project."
-      - company: "[Programming Research Laboratory](https://prl-prg.github.io/)"
-        position: Research intern
-        location: Prague, Czech Republic
-        start_date: "2021"
-        end_date: "2022"
-        highlights:
-          - "developed dynamic analysis for Haskell programs to explore the use of laziness in practice."
-      - company: Factorify
-        position: Java backend engineer
-        location: ""
-        start_date: "2017"
-        end_date: "2019"
-        highlights:
-          - "worked on a web-based ERP system designed for management and automation of factory workflows (Spring framework, Nginx, PostgreSQL)."
+        date: 2011 -- 2017
     Extracurricular Activities:
       - label: Organising FIKS competition
         details: Organising the [FIKS](https://fiks.fit.cvut.cz/) correspondence competition to attract talented high school students to CTU FIT.
@@ -105,9 +136,11 @@ design:
   colors:
     name: rgb(22, 90, 176)
     section_titles: rgb(22, 90, 176)
-    connections: rgb(22, 90, 176)
+    connections: black
     links: rgb(22, 90, 176)
   typography:
     font_family: Libertine
+  links:
+    underline: false
 locale_catalog:
   language: en
