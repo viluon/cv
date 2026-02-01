@@ -45,6 +45,7 @@ jobs:
         run: |
           mkdir -p _site
           cp rendercv_output/Ondřej_Kvapil_CV.html _site/index.html
+          cp rendercv_output/Ondřej_Kvapil_CV.pdf _site/
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
