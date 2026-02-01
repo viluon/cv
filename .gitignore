@@ -31,5 +31,8 @@
 *.mw
 _minted-*/
 
+# direnv
+.direnv/
+
 # rendercv
 rendercv_output/
