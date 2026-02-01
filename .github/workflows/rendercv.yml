@@ -1,0 +1,52 @@
+name: RenderCV
+on:
+  push:
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: DeterminateSystems/nix-installer-action@v21
+      - uses: DeterminateSystems/magic-nix-cache-action@v13
+      - name: build CV
+        run: nix develop --command just build
+      - name: upload PDF
+        uses: actions/upload-artifact@v6
+        with:
+          name: cv-pdf
+          path: rendercv_output/Ondřej_Kvapil_CV.pdf
+      - name: release
+        if: github.ref == 'refs/heads/main'
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: ${{ github.token }}
+          automatic_release_tag: latest
+          prerelease: false
+          title: curriculum vitae
+          files: |
+            rendercv_output/Ondřej_Kvapil_CV.pdf
+  pages:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+      - uses: DeterminateSystems/nix-installer-action@v21
+      - uses: DeterminateSystems/magic-nix-cache-action@v13
+      - name: build CV
+        run: nix develop --command just build
+      - name: prepare Pages content
+        run: |
+          mkdir -p _site
+          cp rendercv_output/Ondřej_Kvapil_CV.html _site/index.html
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        id: deployment
