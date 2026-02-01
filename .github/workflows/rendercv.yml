@@ -19,16 +19,28 @@ jobs:
         with:
           name: cv-pdf
           path: rendercv_output/Ondřej_Kvapil_CV.pdf
-      - name: release
+      - name: delete existing release
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        uses: marvinpinto/action-automatic-releases@v1.2.1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes || echo "No existing release to delete"
+      - name: delete tag
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        continue-on-error: true
+        run: |
+          git push origin --delete latest
+          git tag --delete latest
+      - name: create release
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: softprops/action-gh-release@v2
         with:
-          repo_token: ${{ github.token }}
-          automatic_release_tag: latest
-          prerelease: false
-          title: curriculum vitae
+          fail_on_unmatched_files: true
           files: |
             rendercv_output/Ondřej_Kvapil_CV.pdf
+          name: curriculum vitae
+          prerelease: false
+          tag_name: latest
   pages:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
