@@ -1,0 +1,137 @@
+cv:
+  name: Ondřej Kvapil
+  email: viluon@pm.me
+  website: https://viluon.me
+  social_networks:
+    - network: GitHub
+      username: viluon
+
+  sections:
+    Education:
+      - institution: Faculty of Information Technology, Czech Technical University
+        area: systems programming
+        degree: Master of Science
+        location: Prague, Czech Republic
+        start_date: '2021'
+        end_date: '2023'
+        highlights:
+          - '[P4 Language Server](https://dspace.cvut.cz/handle/10467/108860), supervised by Ing. Viktor Puš, Ph.D., MBA'
+
+      - institution: Faculty of Information Technology, Czech Technical University
+        area: computer science
+        degree: Bachelor of Science
+        location: Prague, Czech Republic
+        start_date: '2017'
+        end_date: '2021'
+        highlights:
+          - '[Haskell dynamic tracing](https://github.com/viluon/bachelors-thesis), awarded [dean''s award for outstanding final thesis](https://fit.cvut.cz/cs/studium/pruvodce-studiem/bakalarske-a-magisterske-studium/cena-dekana), supervised by Ing. Filip Křikava, Ph.D'
+
+      - institution: Gymnázium Olomouc-Hejčín
+        area: High school studies
+        degree: ''
+        location: Olomouc, Czech Republic
+        start_date: '2011'
+        end_date: '2017'
+
+    Experience:
+      - company: '[Deutsche Börse Group](https://deutsche-boerse.com/)'
+        position: Senior software engineer
+        location: Prague, Czech Republic
+        start_date: '2023'
+        end_date: present
+        highlights:
+          - 'developing high availability distributed systems for commodities trading in the [M7 product family](https://deutsche-boerse.com/dbg-en/products-services/ps-technology/ps-7-market-technology/ps-m7/7-Market-Technology-M7-25032).'
+
+      - company: '[Intel](https://intel.com/)'
+        position: Compiler engineering intern
+        location: Remote
+        start_date: '2022'
+        end_date: '2023'
+        highlights:
+          - 'worked on the [P4 language compiler](https://github.com/p4lang/p4c) in the Switching and Fabric Group (XFG), co-founded the [P4 analyzer](https://github.com/p4lang/p4analyzer) project.'
+
+      - company: '[Programming Research Laboratory](https://prl-prg.github.io/)'
+        position: Research intern
+        location: Prague, Czech Republic
+        start_date: '2021'
+        end_date: '2022'
+        highlights:
+          - 'developed dynamic analysis for Haskell programs to explore the use of laziness in practice.'
+
+      - company: Factorify
+        position: Java backend engineer
+        location: ''
+        start_date: '2017'
+        end_date: '2019'
+        highlights:
+          - 'worked on a web-based ERP system designed for management and automation of factory workflows (Spring framework, Nginx, PostgreSQL).'
+
+    Extracurricular Activities:
+      - label: Organising FIKS competition
+        details: Organising the [FIKS](https://fiks.fit.cvut.cz/) correspondence competition to attract talented high school students to CTU FIT.
+        date: 2018--2024
+
+      - label: Safety Benchmarks Hackathon
+        details: Contestant at the [Safety Benchmarks Hackathon](https://alignmentjam.com/jam/benchmarks). [Our project](https://alignmentjam.com/project/exploring-the-robustness-of-model-graded-evaluations-of-language-models) won first place.
+        date: '2023'
+
+      - label: PLMW at POPL 2023
+        details: Attendee of the Programming Language Mentoring Workshop (PLMW) at the ACM SIGPLAN Symposium on Principles of Programming Languages ([POPL 2023](https://popl23.sigplan.org/)), Boston, Massachusetts, United States, January 15--21, 2023
+        date: '2023'
+
+      - label: PLISS 2022
+        details: Student of the Programming Language Implementation Summer School ([PLISS](https://pliss.org/2022/)), Bertinoro, Italy, October 24--29, 2022
+        date: '2022'
+
+      - label: STIGMA 2021
+        details: Student of the School on Theoretical Informatics, Graphs And Mathematical Applications ([STIGMA](https://users.fit.cvut.cz/~vallatom/stigma/)), Kruh u Jilemnice, Czech Republic, September 13--17, 2021
+        date: '2021'
+
+      - label: OPLSS 2021
+        details: Student of the Oregon Programming Languages Summer School (Foundations of Programming and Security), [online](https://www.cs.uoregon.edu/research/summerschool/summer21/participants.php), June 14--26, 2021
+        date: '2021'
+
+      - label: PLISS 2021
+        details: Student of the Programming Language Implementation Summer School, [online](https://pliss.org/2021/), May 20 -- June 29, 2021
+        date: '2021'
+
+      - label: STIGMA 2020
+        details: Student of the School on Theoretical Informatics, Graphs And Mathematical Applications ([STIGMA](https://users.fit.cvut.cz/~vallatom/stigma/)), Kruh u Jilemnice, Czech Republic, September 14--18, 2020
+        date: '2020'
+
+      - label: ETAPS volunteer
+        details: Student volunteer at [ETAPS](https://etaps.org/2019).
+        date: '2019'
+
+      - label: Hack Kosice winner
+        details: Contestant at Hack Kosice in Kosice, Slovakia. [Our project](https://devpost.com/software/medify) won the Efficient and Faster Care Challenge.
+        date: '2019'
+
+      - label: HackUPC 2018 winner
+        details: Contestant at HackUPC 2018 in Barcelona, Spain. [Our project](https://devpost.com/software/round-trip-flight-optimizer) won the Skyscanner Challenge.
+        date: '2018'
+
+      - label: FIKS participant
+        details: Participant in the [FIKS](https://fiks.fit.cvut.cz/) correspondence competition.
+        date: 2016--2017
+
+      - label: FIRST Lego League
+        details: Programmer in a high school team for the FIRST Lego League robotics competition. 10th place in the FLL 2014 Central European finals in Munich, out of more than 700 European teams.
+        date: 2012--2015
+
+      - label: Volare Space Robotics
+        details: Programmer in a high school team participating in the Volare Space Robotics competition organised by the European Space Agency. We [placed second](https://www.czechspace.cz/cs/druhe-misto-pro-rota) overall.
+        date: '2013'
+
+design:
+  theme: moderncv
+  colors:
+    name: rgb(22, 90, 176)
+    section_titles: rgb(22, 90, 176)
+    connections: rgb(22, 90, 176)
+    links: rgb(22, 90, 176)
+  typography:
+    font_family: Libertine
+
+locale_catalog:
+  language: en

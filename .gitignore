@@ -30,3 +30,6 @@
 *.lol
 *.mw
 _minted-*/
+
+# rendercv
+rendercv_output/
