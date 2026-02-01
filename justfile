@@ -6,6 +6,12 @@ show: build
 build:
 	rendercv render cv.yaml
 
+check:
+	nix flake check
+
+format:
+	nix fmt
+
 watch:
 	rendercv render --watch cv.yaml
 
