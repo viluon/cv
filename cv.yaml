@@ -18,7 +18,7 @@ cv:
         end_date: present
         summary: >
           We're building a new commodity exchange in the [M7 product
-          family](https://deutsche-boerse.com/dbg-en/products-services/ps-technology/ps-7-market-technology/ps-m7/7-Market-Technology-M7-25032),
+          family](https://deutsche-boerse.com/dbg-en/markets-services/ps-technology/ps-7-market-technology/ps-m7),
           in Kotlin, from scratch. It's a highly available 24/7 distributed
           system with complex compliance requirements, where millisecond latency
           matters and fairness is critical.
@@ -93,7 +93,12 @@ cv:
         details: Organising the [FIKS](https://fiks.fit.cvut.cz/) correspondence competition to attract talented high school students to CTU FIT.
         date: 2018--2024
       - label: Safety Benchmarks Hackathon
-        details: Contestant at the [Safety Benchmarks Hackathon](https://alignmentjam.com/jam/benchmarks). [Our project](https://alignmentjam.com/project/exploring-the-robustness-of-model-graded-evaluations-of-language-models) won first place.
+        details: >
+          Contestant at the [Safety Benchmarks
+          Hackathon](https://web.archive.org/web/20250828212118/https://alignmentjam.com/jam/benchmarks).
+          [Our
+          project](https://web.archive.org/web/20231003030511/https://alignmentjam.com/project/exploring-the-robustness-of-model-graded-evaluations-of-language-models)
+          won first place.
         date: "2023"
       - label: PLMW at POPL 2023
         details: Attendee of the Programming Language Mentoring Workshop (PLMW) at the ACM SIGPLAN Symposium on Principles of Programming Languages ([POPL 2023](https://popl23.sigplan.org/)), Boston, Massachusetts, United States, January 15--21, 2023
@@ -129,7 +134,12 @@ cv:
         details: Programmer in a high school team for the FIRST Lego League robotics competition. 10th place in the FLL 2014 Central European finals in Munich, out of more than 700 European teams.
         date: 2012--2015
       - label: Volare Space Robotics
-        details: Programmer in a high school team participating in the Volare Space Robotics competition organised by the European Space Agency. We [placed second](https://www.czechspace.cz/cs/druhe-misto-pro-rota) overall.
+        details: >
+          Programmer in a high school team participating in the Volare Space
+          Robotics competition organised by the European Space Agency. We
+          [placed
+          second](https://web.archive.org/web/20240618025939/https://www.czechspace.cz/cs/druhe-misto-pro-rota)
+          overall.
         date: "2013"
 design:
   theme: moderncv

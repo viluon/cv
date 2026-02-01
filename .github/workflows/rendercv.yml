@@ -1,6 +1,8 @@
 name: RenderCV
 on:
   push:
+  schedule:
+    - cron: "0 6 * * 1"
 jobs:
   render:
     runs-on: ubuntu-latest
@@ -18,7 +20,7 @@ jobs:
           name: cv-pdf
           path: rendercv_output/Ondřej_Kvapil_CV.pdf
       - name: release
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ github.token }}
@@ -29,7 +31,7 @@ jobs:
             rendercv_output/Ondřej_Kvapil_CV.pdf
   pages:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     permissions:
       pages: write
       id-token: write

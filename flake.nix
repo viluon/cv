@@ -21,11 +21,12 @@
         };
 
         devShells.default = pkgs.mkShell {
-          buildInputs = [
+          buildInputs = with pkgs; [
             config.treefmt.build.wrapper
-            pkgs.just
-            pkgs.rendercv
-            pkgs.xdg-utils
+            just
+            lychee
+            rendercv
+            xdg-utils
           ];
         };
       };
