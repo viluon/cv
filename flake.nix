@@ -1,5 +1,5 @@
 {
-  description = "CV project with rendercv and just";
+  description = "Ondřej Kvapil's CV";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -7,7 +7,7 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
-  outputs = inputs@{ nixpkgs, flake-parts, ... }:
+  outputs = inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
 
@@ -17,15 +17,15 @@
         treefmt.config = {
           projectRootFile = "flake.nix";
           programs.nixpkgs-fmt.enable = true;
-          programs.yamlfmt.enable = true;
+          programs.prettier.enable = true;
         };
 
         devShells.default = pkgs.mkShell {
           buildInputs = [
+            config.treefmt.build.wrapper
             pkgs.just
             pkgs.rendercv
             pkgs.xdg-utils
-            config.treefmt.build.wrapper
           ];
         };
       };

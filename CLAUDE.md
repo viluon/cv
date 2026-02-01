@@ -5,6 +5,7 @@ In all your interactions and commit messages, be as concise as possible. Sacrifi
 - verify early -- test, lint, typecheck
 
 When planning:
+
 - design a feedback loop
 - aim to get feedback on the most uncertain parts first
 - keep the plan short: "Does Claude really need this explanation?" and "Does this paragraph justify its token cost?"
