@@ -15,7 +15,7 @@ jobs:
       - name: run checks
         run: nix develop --command just check
       - name: upload PDF
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: cv-pdf
           path: rendercv_output/Ondřej_Kvapil_CV.pdf
