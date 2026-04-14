@@ -33,7 +33,7 @@ jobs:
           git tag --delete latest
       - name: create release
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           fail_on_unmatched_files: true
           files: |
@@ -62,7 +62,7 @@ jobs:
           mkdir -p _site
           cp rendercv_output/Ondřej_Kvapil_CV.html _site/index.html
           cp rendercv_output/Ondřej_Kvapil_CV.pdf _site/
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - uses: actions/deploy-pages@v5
