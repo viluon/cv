@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: DeterminateSystems/nix-installer-action@v22
-      - uses: DeterminateSystems/magic-nix-cache-action@v13
+      - uses: DeterminateSystems/magic-nix-cache-action@v14
       - name: build CV
         run: nix develop --command just build
       - name: run checks
@@ -54,7 +54,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/configure-pages@v6
       - uses: DeterminateSystems/nix-installer-action@v22
-      - uses: DeterminateSystems/magic-nix-cache-action@v13
+      - uses: DeterminateSystems/magic-nix-cache-action@v14
       - name: build CV
         run: nix develop --command just build
       - name: prepare Pages content
